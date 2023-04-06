@@ -2,16 +2,28 @@ $bg: #eee;
 
 .box {
     background-color: $bg;
-    &__title {
+    &_title {
         color: #f00;
     }
-    &__image {
+    &_image {
         max-width: 200px;
     }
-    &__svg {
+    &_svg {
         fill: blueviolet;
         &:hover {
             fill: gold;
+        }
+    }
+    &_circle {
+        fill: blueviolet;
+        &:hover {
+            fill: rgb(43, 226, 83);
+        }
+    }
+    &_ellipse {
+        fill: gold;
+        &:hover {
+            fill: blueviolet;
         }
     }
 }
