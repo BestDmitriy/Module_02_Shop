@@ -1,29 +1,65 @@
-$bg: #eee;
+$text: #2e3318;
+$orange: #ba6a2c;
+$white: #ffffff;
 
-.box {
-    background-color: $bg;
-    &_title {
-        color: #f00;
+.header {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__nav {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+        gap: 36px;
     }
-    &_image {
-        max-width: 200px;
-    }
-    &_svg {
-        fill: blueviolet;
+    &__link {
+        font-size: 16px;
+        color: $text;
+        text-decoration: none;
         &:hover {
-            fill: gold;
+            color: $orange;
         }
     }
-    &_circle {
-        fill: blueviolet;
+    &__tel {
+        font-size: 16px;
+        color: $text;
+        text-decoration: none;
         &:hover {
-            fill: rgb(43, 226, 83);
+            color: $orange;
         }
     }
-    &_ellipse {
-        fill: gold;
-        &:hover {
-            fill: blueviolet;
-        }
+    &__cart {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-image: url(../images/cart.svg);
+        background-color: $orange;
+        background-repeat: no-repeat;
+        background-size: 17px 15px;
+        background-position: center center;
+        position: relative;
+
     }
+    &__counter {
+        position: absolute;
+        right: 10px;
+        top: 6px;
+        color: $white;
+        font-size: 8px;
+    }
+}
+.logo {
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 120px;
+    height: 32px;
+
 }
