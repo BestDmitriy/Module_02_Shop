@@ -63,7 +63,7 @@ body {
         position: relative;
         &:hover {
             background-color: $green;
-            border: 2px solid $green;
+            border: 1px solid $green;
         }
     }
     &__counter {
