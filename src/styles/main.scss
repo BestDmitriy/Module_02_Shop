@@ -354,6 +354,7 @@ body {
     }
     &-button-next, &-button-prev {
         top: -60px;
+        display: block;
         &:hover {
             &::after {
                 color: rgba($green, 1);
@@ -365,11 +366,11 @@ body {
         }
     }
     &-button-next {
-        display: block;
+        
         right: -8px;
     }
     &-button-prev {
-        display: block;
+        
         left: initial;
         right: 72px;
     }
