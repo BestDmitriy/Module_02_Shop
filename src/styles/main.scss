@@ -251,6 +251,11 @@ body {
     text-decoration: none;
     border-radius: 3.6rem;
     display: inline-block;
+    &_min {
+        font-size: 1.4rem;
+        padding: 2rem 3.4rem;
+        box-shadow: 0px 1rem 1.1rem .17rem rgba(182, 93, 29, 0.15);
+    }
 }
 .offer {
     background-image: url(../images/offer.png);
@@ -425,6 +430,10 @@ body {
         padding: 0;
         background-position: center center;
         border-radius: 100%;
+        &_min {
+            width: 40px;
+            height: 40px;
+        }
     }
     &__minus{
         pointer-events: none;
@@ -445,6 +454,9 @@ body {
         width: 46px;
         border: none;
         padding: 0;
+        &_min {
+            width: 33px;
+        }
     }
 }
 .about {
@@ -505,4 +517,144 @@ body {
             }
         }
     }
+}
+.trends {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+    &__text {
+        margin-top: 4rem;
+    }
 }  
+.catalog {
+    padding-top: 11rem;
+    padding-bottom: 14rem;
+    &__list{
+        margin-top: 8.5rem;
+        margin-bottom: 5rem;
+    }
+    &__btn {
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $green;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        letter-spacing: 0.1rem;
+        opacity: .8;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        max-width: 182px;
+        margin: 6rem auto 0;
+        cursor: pointer;
+        &:hover {
+            opacity: 1;
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-image: url(../images/catalog/refresh.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+.category {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    &__item {
+        flex-basis: 230px;
+        text-align: center;
+    }
+    &__link {
+        padding: 2.4rem 0;
+        border: 1px solid rgba($green, .5);
+        color: rgba($green, .5);
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-radius: 4rem;
+        display: block;
+        transition: .2s;
+        &:hover {
+            border: 1px solid $orange;
+            color: $orange;
+        }
+    }    
+}
+.category-swiper {
+    display: none;
+    &__link {
+        padding: 2.4rem 0;
+        border: 1px solid rgba($green, .5);
+        color: rgba($green, .5);
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-radius: 4rem;
+        display: block;
+        &:hover {
+            border: 1px solid $orange;
+            color: $orange;
+            box-shadow: none;
+        }
+    }
+}
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    &__item {
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 2rem;
+        padding: 2.7rem 3rem 3.8rem;
+        box-sizing: border-box;
+        &:hover {
+            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+        }
+    }
+    &__cover {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 204px;
+        text-align: center;
+    }
+    &__image {
+        width: 100%;
+        max-width: 351px;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__title {
+        font-family: $font-cormorant;
+        font-size: 3rem;
+        color: $green;
+        margin-top: 1.7rem;
+        margin-bottom: 0;
+    }
+    &__description {
+        font-size: 1.6rem;
+        color: rgba($green, .7);
+        margin-top: 1.8rem;
+        margin-bottom: 0;
+        min-height: 61px;
+        max-width: 300px;
+        line-height: 1.5;
+    }
+    &__price {
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+        margin-top: 0;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5%;
+    }
+}
